@@ -1,5 +1,8 @@
 name: nuevo workflow
-on: [push]
+on:
+  push:
+    branches:
+      - main
 jobs:
   dummy:
     runs-on: ubuntu-latest

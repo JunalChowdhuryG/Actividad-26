@@ -1,5 +1,8 @@
 name: dispatch manual
-on: workflow_dispatch
+on:
+  push:
+    branches:
+      - main
 jobs:
   run-python:
     runs-on: ubuntu-latest
