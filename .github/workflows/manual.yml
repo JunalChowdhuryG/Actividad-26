@@ -3,16 +3,22 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+    inputs:
+      confirma_deploy:
+        description: 'Confirmas despligue? s/n: '
+        required: true
+        default: 's'
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: configurar Python
+      - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.x"
-      - name: ejecutar despliegue manual
+      - name: Run manual deploy
         run: python deploy_manual.py
         env:
-          INPUT_CONFIRMATION: "s"
+          CONFIRM_DEPLOY: ${{ github.event.inputs.confirma_deploy || 's' }}
