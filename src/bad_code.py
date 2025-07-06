@@ -1,2 +1,2 @@
-def funcion_malo(  ):
+def funcion_malo():
     print("funcion malo")
