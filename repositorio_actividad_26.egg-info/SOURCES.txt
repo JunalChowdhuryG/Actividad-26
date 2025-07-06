@@ -1,0 +1,7 @@
+README.md
+setup.py
+repositorio_actividad_26.egg-info/PKG-INFO
+repositorio_actividad_26.egg-info/SOURCES.txt
+repositorio_actividad_26.egg-info/dependency_links.txt
+repositorio_actividad_26.egg-info/top_level.txt
+tests/test_app.py
