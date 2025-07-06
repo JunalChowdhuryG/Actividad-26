@@ -1,0 +1,7 @@
+name: nuevo workflow
+on: [push]
+jobs:
+  dummy:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "funciona el nuevo workflow"

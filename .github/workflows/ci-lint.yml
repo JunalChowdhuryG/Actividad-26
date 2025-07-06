@@ -1,0 +1,18 @@
+name: analisis con flake8
+on:
+  push:
+    branches:
+      - main
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+      - name: instalar flake8
+        run: pip install flake8
+      - name: Run lint
+        run: python lint.py

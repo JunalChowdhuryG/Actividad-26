@@ -1,0 +1,13 @@
+name: dispatch manual
+on: workflow_dispatch
+jobs:
+  run-python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+      - name: ejecutar deploy
+        run: python deploy.py

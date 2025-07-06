@@ -1,0 +1,43 @@
+name: CI
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/**'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+      - name: construir
+        run: echo "construyendo proyecto"
+      - name: compilar varios modulos
+        run: |
+          python -m compileall src/module1
+          python -m compileall src/module2
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+      - name: Ejecutar tests
+        run: python -m unittest discover
+  deploy:
+    needs: [build, test]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: configurar python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+      - name: Ejecutar despliegue
+        run: python deploy.py

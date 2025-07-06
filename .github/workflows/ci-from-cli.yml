@@ -1,0 +1,8 @@
+name: CI para CLI
+on: [push]
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "workflow ejecutar desde la CLI"
