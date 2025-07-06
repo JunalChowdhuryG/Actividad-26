@@ -1,7 +1,7 @@
 import sys
 import os
 
-response = os.getenv("Confirmas despligue? s/n: ", "n")
+response = os.getenv("Confirmas despligue? s/n: ", "s")
 if response.lower() != "s":
     print("despliegue cancelado", file=sys.stderr)
     sys.exit(1)
