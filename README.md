@@ -34,6 +34,8 @@ a veces el termino  implemmentacion continua es usado como sinonimo de implement
 ## **Por qué GitHub Actions?**
 
 ### **Escribe en Comparativa-CI.md un párrafo donde compares GitHub Actions con Jenkins y GitLab CI, enfocándote en integración con GitHub, facilidad de uso y coste.**
+- [dev.to: Jenkins vs. GitHub Actions vs. GitLab CI](https://dev.to/574n13y/jenkins-vs-github-actions-vs-gitlab-ci-2k35)
+- [reddit: gitlab_ci_vs_jenkins_vs_github_actions](https://www.reddit.com/r/devops/comments/105a2bn/gitlab_ci_vs_jenkins_vs_github_actions/)
 
 **GitHub actions , Jenkins y GitLab CI son simmilares pero se diferencian:**
 - **GitHub Actions** destaca por la integración nativa con GitHub lo que facilita  configuración y gestión  workflows directamente en el repositorio ess ideal para proyectos  en GitHub  la sintaxis YAML es intuitiva   yy su Marketplace ofrece acciones reutilizables aunque puede ser costoso para proyectos grandes debido a los minutos facturables 
